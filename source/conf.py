@@ -39,14 +39,11 @@ release = u''
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.doctest',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.githubpages',
+	'sphinx.ext.mathjax'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['PUGtemplates','_templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -78,18 +75,24 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+#html_theme = 'alabaster'
+#html_theme = 'sphinxdoc'
+html_theme = 'nature'
+#html_theme = 'agogo'
+#html_theme = 'traditional'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {}
+
+html_logo = '../images/dish.jpg'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ['PUGstatic','_static']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -136,6 +139,7 @@ latex_documents = [
      u'Stacy Mader, Jane Kaczmarek, John Sarkissian, Jimi Green', 'manual'),
 ]
 
+latex_logo = '../images/dish.jpg'
 
 # -- Options for manual page output ------------------------------------------
 

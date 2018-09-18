@@ -101,7 +101,7 @@ The remote observer in need of assistance should, in general, consult these in t
 FIXME shows the flow of support as defined above.
 
 Role of the Remote Observer
---------------------------
+---------------------------
 
 The role of the Remote Observer is to monitor the progress of the observation and the condition of the telescope and 
 collected data through a variety of interfaces. During the observation, this monitoring is the remote observers' primary 
@@ -356,17 +356,17 @@ From the startup GUI, select the relevant mode for your observations (and select
 For example:
 
 *  For DFB4 spectral--line/continuum observing select:
- *  DIGITAL F'BANK (time binning)
- *  EXPERT MODE
- *  SELECT PROJECT (if present, via bottom menu)
+ **  DIGITAL F'BANK (time binning)
+ **  EXPERT MODE
+ **  SELECT PROJECT (if present, via bottom menu)
 *  For Pulsar observing select:
- *  Pulsar observing modes.
- *  EXPERT MODE
- *  SELECT PROJECT (if present, via bottom menu).
- *  Once open:
-  *  Select PDFB4.
-  *  FOLD or SEARCH MODE
-  *  SELECT relevant schedule
+ **  Pulsar observing modes.
+ **  EXPERT MODE
+ **  SELECT PROJECT (if present, via bottom menu).
+ **  Once open:
+  ***  Select PDFB4.
+  ***  FOLD or SEARCH MODE
+  ***  SELECT relevant schedule
 *  Focus: Enable
 *  Antenna: Enable
 
