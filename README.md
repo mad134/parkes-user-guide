@@ -1,2 +1,4 @@
-# parkes-user-guideUsers guide and documentation for scientists using the Australia Telescope Parkes Observatory.
+# parkes-user-guide
+
+Users guide and documentation for scientists using the Australia Telescope Parkes Observatory.
 
