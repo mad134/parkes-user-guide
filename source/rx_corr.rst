@@ -89,7 +89,7 @@ and 500Hz. For more information on particular receivers, please refer below.
 
 The 50cm receiver in the 1050CM package injects a cal signal using a directional coupler after each LNA (strictly, after the 4-port hybrid used 
 to combine the signal from each pair of opposing probes and LNAs). A splitter is used to generate two identical cal signals from the same noise 
-source. Further information on the receiver can be found `here <http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=959722>`_ .
+source. Further information on the receiver can be found in `Granet et al. (2005) <http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=959722>`_ .
 
 20CM Multibeam
 --------------

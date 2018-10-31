@@ -340,8 +340,85 @@ sources, produce source lists, spectra and moment maps. Users are encouraged to 
 
 Pulsar data reduction
 =====================
+Overview of pulsar data products
+--------------------------------
+Pulsar data products come in three types:
 
-For reducing Pulsar data, please refer to the ATNF `Pulsar pages <http://www.atnf.csiro.au/research/pulsar/>`_.
+1. **Fold-mode observations** in which the incoming data stream has been folded at the known pulsar period to form a pulse profile.  
+2. **Search-mode observations** in which the incoming data stream is sampled at rates from around 64us to milliseconds, channelised and written to disk. These observations are used to search for currently unknown pulsars and also to study the single pulse emission from known pulsars.
+3. **Baseband/voltage data streams** where the raw incoming data stream is recorded to disk.  This observing mode produces huge data volumes but provides maximum flexibility in how the data can be processed offline.
+
+How to obtain your pulsar data
+------------------------------
+The majority of data sets obtained from the Parkes telescope are embargoed for a period of 18 months. During this time the data can only be accessed by the individuals on the original observing proposal relating to those observations.  In a few cases (such as PULSE@Parkes outreach observations with code P595, and P737 commissioning data from 2018OCTS onwards) have no embargo period.  A few other projects have had agreement from the director for an extended embargo period.  This includes the PX501 observations that have a 10 year embargo period.
+
+The primary access point for pulsar data is through the Data Access Portal (known as the DAP - `<https://data.csiro.au/dap)>`_. The DAP is CSIRO’s long-term archive for Parkes pulsar data, which are available for download as individual files or in ‘collections’, bundled by project ID and observing semester. 
+
+Data for search-, fold- and calibration-mode observations are available in PSRFITS format. Fold-mode observations are also available averaged in frequency and time, allowing a quick look at the data. 
+
+Data files corresponding to observations with the PDFB4 and CASPSR backend instruments are usually available from the DAP within one week of the observation being completed. Specific observations taken with the BPSR backend are available from the DAP within 30 days of being completed, but also have an 18-month embargo applied.
+
+Data for a few observation types and backend instruments are not available in the DAP:
+
+1. Medusa observations with the ultra-wide-bandwidth receiver are currently not available through the DAP, but will be soon
+2. Baseband data files are only available for specific observations, and currently only those containing FRB detections 
+
+The DAP provides numerous access methods that are described in `Hobbs et al. (2011) <http://adsabs.harvard.edu/abs/2011PASA...28..202H>`_. We describe the two most common methods below.  
+
+Accessing data from you observations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If you are listed on a project proposal, you can access your own data during the embargo period by following the steps below:
+
+* Navigate to data.csiro.au and log-in using your OPAL account
+* In the search box type the project ID for your observations (e.g., P456) and select ‘search’
+* Select your collection, click on the 'Files' tab, and select files for individual download (Max. 2GB), or scroll to the bottom of the page and select 'Download via WebDAV' for access to the whole collection
+* Enter an email address and click 'request files' - you will receive a confirmation email once the collection is available
+
+.. note::
+If you are **not** logged in when you request data, you will receive a temporary password. If you are logged in when you request data, your credentials will be your OPAL account email (or NEXUS ident) and password.
+
+For users with a CSIRO Unix account, a subset of the data files can be accessed on local machines in the archive directories,  prefixed with ‘$DFB_’ for PDFB fold-mode observations, ‘$DFBSRCH_’ for PDFB search-mode observations, ‘$UWL_’ for Medusa observations and ‘$CASPSR_’ for CASPSR observations.  It is likely that this access method will be deprecated in the near future, as we move towards using the DAP as the primary access point for pulsar data.
+
+For users who are not CSIRO Unix account holders, your primary access point is the DAP.
+
+Searching for observations that match a criteria
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If you wish to download all non-embargoed data files for a particular sky region or pulsar then use the cone-search interface available from `<http://data.csiro.au/psrsearch>`_.  This interface allows you to search on source name, project ID, sky position etc. and you can download one or more resulting data files.
+
+For users with a CSIRO Unix account, a subset of the data files can be accessed on local machines in the archive directories,  prefixed with ‘$DFB_’ for PDFB fold-mode observations, ‘$DFBSRCH_’ for PDFB search-mode observations, ‘$UWL_’ for Medusa observations and ‘$CASPSR_’ for CASPSR observations.  It is likely that this access method will be deprecated in the near future, as we move towards using the DAP as the primary access point for pulsar data.
+
+Need help?
+^^^^^^^^^^
+In some cases, you may experience delays when downloading large files or large collections. In such instances, please contact `<Lawrence.Toomey@csiro.au>`_ if you require assistance with these. 
+
+Introduction to pulsar data reduction
+-------------------------------------
+Pulsar data analysis can be divided into (1) pulsar timing and forming pulse profiles, (2) searching for unknown pulsars and (3) studying individual pulses from known pulsars.  The standard software packages are freely-available.  Virtual machines and Docker images are also available in which the relevant packages are pre-installed.
+
+Pulsar timing and forming pulse profiles
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The raw data files (as recorded and downloaded from the archive) require flux density and polarisation calibration procedures to be applied.  This is currently carried out using an observation of a switched calibration signal obtained just before or after the pulsar observation.  An initial polarisation calibration can be carried out using the PSRCHIVE software routine “pac”.  Flux calibration requires observations of a standard calibrator source.
+
+The PSRCHIVE software package can be used to complete the processing of the data files. Tutorials on how to produce pulse profiles are summarised in van Straten, Demorest & Oslowski (2012) and are available from `<http://psrchive.sourceforge.net/tutorial/>`_. Pulsar timing relies on forming pulse arrival times (using the paas and pat software) and obtaining an initial timing model for the pulsar (from, e.g., `the pulsar catalogue, <http://www.atnf.csiro.au/research/pulsar>'_). The tempo2 software package is subsequently used for forming timing residuals and obtaining new timing model parameters.
+
+Searching for unknown pulsars
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The raw data files obtained from the DAP are in PSRFITS search mode format.  This works directly in packages such as dspsr and presto. However, the sigproc search software cannot read this format directly. A version, known as sixproc, does provide the ability to read this format and also provides a way to convert the format (using filterbank) to the sigproc filterbank format.
+
+If a likely folding period is known then dspsr can be used to fold the data at the expected period and then pdmp used to carry out a small search in period and dispersion measure.  When searching for completely unknown pulsars the sigproc/sixproc or presto codes are used. These provide algorithms for carrying out periodicity and single pulse searches.  Search pipelines have been described at XX, YY, ZZ. In brief, a processing pipeline will carry out RFI mitigation, then de-disperse the data at a range of trial dispersion measures before carrying out the periodicity or single pulse search.  The pipelines produce a set of possible candidates that can be viewed by eye or ranked using machine learning algorithms. 
+
+Studying individual pulses from known pulsars
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+There is a lack of software routines and tutorials on processing single pulses from known pulsars.  Tools such as dspsr can be used to extract individual pulses from a search mode data set. The resulting single pulses can then be processed using standard PSRCHIVE tools.  The pfits software package can be used to visualise the time series and `PSRSALSA <http://www.jb.man.ac.uk/~pulsar/Resources/psrsalsa.html>`_  can also be used to measure pulse energies, nulling fraction and drift rates.
+
+Automatic searches for fast radio bursts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Some project teams that use the BPSR backend and the multibeam receiver have requested that the data streams are automatically searched for the signatures of fast radio bursts (FRBs).  Such processing is carried out using Swinburne University computing facilities and emails are sent to the observing team with candidate fast radio bursts
+
+Required Acknowledgements
+-------------------------
+Any publications resulting from Parkes pulsar data processing should acknowledge the Parkes telescope and, for data obtained from the data archive, the archive should also be acknowledged. The required statements are available from `<https://www.atnf.csiro.au/research/publications/Acknowledgements.html>`_.
+
 
 Other Packages
 ==============
