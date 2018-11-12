@@ -9,6 +9,7 @@ This manual is a reference guide and it is not necessary that it be read to comp
 
 **If you find that this guide does not accurately describe the correct usage of Parkes or its subsequent systems, please email the Parkes Users Guide (PUG) editorial team at <xxx_userguide@atnf.csiro.au>.
 Comments to the documentation are especially welcomed.**
+
 Conventions
 ===========
 

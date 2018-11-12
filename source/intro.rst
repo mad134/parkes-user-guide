@@ -17,13 +17,13 @@ Overview of the Parkes Observatory
 The Parkes Observatory is located 414.80m above sea level at Latitude -32d 59m 54.263s South, Longitude 148d 15m 48.636s East, 25 kilometres north of the town of Parkes which is approximately 365 kilometres west of Sydney.
 It is 6 kilometres off the Newell Highway, the main road from Parkes to Dubbo. The Shire has a population of 15,000 and the town a population of 10,000 and is in the middle of a rich sheep, wheat producing and mining area. 
 
-The Parkes site contains the 64-metre Radio Telescope, the 12-metre ASKAP prototype antenna, an administration building with offices, workshops and library, Visitors Discovery Centre and `The Dish Cafe <http://www.dishcafe.com.au/>`_. In addition, there are numerous testing and monitoring facilities on site. 
-
-.. figure:: ../../images/parkes_sitemap_google.png
+.. figure:: ../images/parkes_sitemap_google.png
     :scale: 60%
     :align: center
     :alt:  Parkes Observatory site map.
     :figclass: align-center
+
+The Parkes site contains the 64-metre Radio Telescope, the 12-metre ASKAP prototype antenna, an administration building with offices, workshops and library, Visitors Discovery Centre and `The Dish Cafe <http://www.dishcafe.com.au/>`_. In addition, there are numerous testing and monitoring facilities on site. 
 
 The observatory can be contacted at the following address:
 
@@ -32,7 +32,6 @@ The observatory can be contacted at the following address:
 | 473 Telescope Road (or PO BOX 276)
 | PARKES NSW 2870
 | Australia
-
 | Switch:(02) 6861 1700 [International +61 2 6861 1700]
 | Fax: (02) 6861 1730 [International +61 2 6861 1730]
 
