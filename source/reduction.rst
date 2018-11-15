@@ -1,6 +1,13 @@
 Data Reduction
 **************
 
+Data Access
+===========
+
+Spectral--line (non-pulsar) data is automatically uploaded into the `Australia Telescope Online Archive (ATOA) <http://atoa.atnf.csiro.au/>`_. 
+Using your OPAL account, you can download data directly from ATOA. There is usally a gap of a few days between taking your data and seeing it in
+ATOA. For Pulsar data, refer to the `CSIRO Data Access Portal (DAP) <https://data.csiro.au/dap/home?execution=e1s1>`_.
+
 ATNF Data Format
 ================
 
@@ -8,8 +15,11 @@ Spectrometer data output from ATNF correlators is written in `RPFITS <http://www
 format. For Pulsar data, a modified version of the FITS standard, `PSRFITS <http://www.atnf.csiro.au/research/pulsar/index.html?n=Main.Psrfits>`_
 is used.
 
+Spectral line & continuum data
+==============================
+
 DFB spectral--line bandpass normalization
-=========================================
+-----------------------------------------
 
 As of June 2015, it has become known DFB3 and DFB4 spectral--line data lack the correct normalization and have not had the Tsys scaling applied.
 To convert the individual raw spectrum R(p,t,c) for polarization p, time t and spectral channel c, it should be scaled as follows (courtesy
@@ -74,7 +84,7 @@ all spectral channels c. For the cross-polar terms p=AB* the correction is the g
  Av(AB*,t) = sqrt( Av(AA*,t) * Av(BB*,t) )
 
 Opacity calculations
-====================
+--------------------
 
 FIXME: Show annual sky brightness, zenith attenuation and pwv plots at various frequencies.
 
@@ -117,7 +127,7 @@ A web form allowing calculation of Zenithal Opacites (and other meterological da
 `here <http://www.parkes.atnf.csiro.au/cgi-bin/utilities/opacity.cgi>`_.
 
 Spectral-line Calibration
-=========================
+-------------------------
 
 Traditionally, spectral--line observing teams have devised their own means to calibrate data. A suggested
 procedure using the SPOT mode of the Telescope Control Software (TCS), which is used to obtain
@@ -127,7 +137,7 @@ In addition to calibration, the above utility can be used for high-frequency (13
 observations to determine pointing offsets using bright water maser and ammonia sources.
 
 LIVEDATA & GRIDZILLA
-====================
+--------------------
 
 Detailed information on the specifics of LIVEDATA and GRIDZILLA
 as related to the HIPASS and ZOA HI Surveys can be found in Barnes et al. (2001), MNRAS, 322 486.
@@ -140,7 +150,7 @@ With **GRIDILLA** and **LIVEDATA**, it is possible to perform
 
 
 ASAP
-====
+----
 
 The `ATNF Spectral Analysis Package (ASAP) <https://svn.atnf.csiro.au/trac/asap>`_ is a new software package to reduce single-dish, 
 single-pointing spectral line observations. At this stage it is tuned towards data from ATNF instruments and reads RPFITS and is
@@ -148,7 +158,7 @@ able to output SDFITS, ASCII and CLASS format for processing within `GILDAS <htt
 `SPECX <http://www.jach.hawaii.edu/JCMT/software/specx/>`_. Data reduction examples using ASAP can be found below.
 
 Example **ASAP** batch script: POSITION SWITCHING 
---------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In this example, observations at 22GHz are done in Position Switching Mode, where the source 
 and a referenced position (free of line emission) are observed in sequence. The script below 
@@ -193,7 +203,7 @@ the current directory.
 
 
 Example **ASAP** batch script: Beam Switching (MX Mode)
--------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In Beam--Switching or MX mode, each beam of the 20CM or 6GHz Multibeam receivers is placed in 
 turn on  the source of interest. When not on-source, the other beams are still aquiring data
@@ -233,7 +243,7 @@ The script file is shown below.
 
 
 MIRIAD
-======
+------
 
 It is possible to process Parkes data using `MIRIAD <http://www.atnf.csiro.au/computing/software/miriad/>`_. Initially, data is 
 processed using **LIVEDATA** and **GRIDZILLA**, where the latter produces a FITS file which can be loaded into MIRIAD using 
@@ -293,7 +303,7 @@ Running this script produces the following output and image.
 For information on keywords used in the above script, please refer to the MIRIAD user guide. 
 
 Gaussian fits within **ASAP**
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Although MIRIAD has utilities to perform gaussian-fits to spectra, you can import the
 ASCII file created from MBSPECT (using log=file) into ASAP. For example, place the following
@@ -331,7 +341,7 @@ and fit a two--component gaussian and output a Postscript file of the plot as fo
  f._p.save('fred.eps')
 
 Source finding programs
-=======================
+-----------------------
 
 ASAP has the functionality to identify spectral lines within a data cube using 
 `LINEFINDER <http://www.atnf.csiro.au/computing/software/asap/refman/public/asap.asaplinefind.linefinder-class.html>`_. 
@@ -426,9 +436,4 @@ Other Packages
 A list of `supported and non-supported data-reduction software <http://www.atnf.csiro.au/computing/software>`_
 is availble via the link.
 
-Data Access
-===========
 
-Spectral--line (non-pulsar) data is automatically uploaded into the `Australia Telescope Online Archive (ATOA) <http://atoa.atnf.csiro.au/>`_. 
-Using your OPAL account, you can download data directly from ATOA. There is usally a gap of a few days between taking your data and seeing it in
-ATOA. For Pulsar data, refer to the `CSIRO Data Access Portal (DAP) <https://data.csiro.au/dap/home?execution=e1s1>`_.
