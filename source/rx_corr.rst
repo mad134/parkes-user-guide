@@ -36,7 +36,7 @@ a coloured bar), the variation of :math:`T_{sys}` is shown across the band. Addi
 available receivers is provided in the table below.
 
 
-.. figure:: ../../images/parkes_tsys.jpg
+.. figure:: ../images/parkes_tsys.jpg
     :scale: 80%
     :align: center
     :alt: Range in system temperature for Parkes receivers.
@@ -102,7 +102,7 @@ at an angle of 15 degrees to the scan direction presents a nearly uniformly spac
 of 35 arcmins (0.583 degrees) thus have an approximately two-thirds overlap. The package can be rotated in feed angle up to -70 degrees and +83.75 from 
 its neutral position; rotation is in a positive direction corresponds to increasing position angle on the sky, or anti-clockwise as shown below:
 
-.. figure:: ../../images/13beam.jpg
+.. figure:: ../images/13beam.jpg
     :scale: 60%
     :align: center
     :alt:  Overview of the Parkes observing system.
@@ -203,7 +203,7 @@ An overall outline of the Parkes observing system is shown below.
 
 FIXME: update
 
-.. figure:: ../../images/signalpath-overview.jpg
+.. figure:: ../images/signalpath-overview.jpg
     :scale: 60%
     :align: center
     :alt:  Overview of the Parkes observing system. 

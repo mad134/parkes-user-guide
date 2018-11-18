@@ -147,9 +147,9 @@ two of the most recent spectra obtained by the monitor, along with a “maximum 
 plot is useful for seeing emission switch on or off over the last hour. All data from the RFI monitor is archived from approximately
 November 2014. It is possible to `query the RFI database <https://www.narrabri.atnf.csiro.au/observing/rfi/monitor/rfi_monitor_archive_query.html>`_.
 
-.. |rfi1| image:: ../../images/rfi_weathermap_spectra.png
-.. |rfi2| image:: ../../images/rfi_weathermap_waterfall.png
-.. |rfi3| image:: ../../images/rfi_weathermap_skyplot.png
+.. |rfi1| image:: ../images/rfi_weathermap_spectra.png
+.. |rfi2| image:: ../images/rfi_weathermap_waterfall.png
+.. |rfi3| image:: ../images/rfi_weathermap_skyplot.png
 
 +--------+-----------+--------+
 | Spectra| Waterfall | Skyplot|
@@ -176,7 +176,7 @@ the ripple with amplitude 6.3mm peak-to-peak (:math:`\lambda/2`) and period 60 s
 with higher-frequency receivers only and proposers should contact Parkes Operations, ATNF-Parkes-Remobs[at]csiro.au before
 submitting proposals.
 
-.. image:: ../../images/ripple.jpg
+.. image:: ../images/ripple.jpg
    :height: 300px
    :alt: Upper panel showing characteristic 5.7 MHz standing wave interference with lower panel showing a cleaner spectrum obtained with receiver cycling.
 

@@ -18,10 +18,10 @@ The Parkes Observatory is located 414.80m above sea level at Latitude -32d 59m 5
 It is 6 kilometres off the Newell Highway, the main road from Parkes to Dubbo. The Shire has a population of 15,000 and the town a population of 10,000 and is in the middle of a rich sheep, wheat producing and mining area. 
 
 .. figure:: ../images/parkes_sitemap_google.png
-    :scale: 60%
-    :align: center
-    :alt:  Parkes Observatory site map.
-    :figclass: align-center
+   :scale: 60%
+   :align: center
+   :alt:  Parkes Observatory site map.
+   :figclass: align-center
 
 The Parkes site contains the 64-metre Radio Telescope, the 12-metre ASKAP prototype antenna, an administration building with offices, workshops and library, Visitors Discovery Centre and `The Dish Cafe <http://www.dishcafe.com.au/>`_. In addition, there are numerous testing and monitoring facilities on site. 
 

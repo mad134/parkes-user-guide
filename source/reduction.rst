@@ -195,7 +195,7 @@ the current directory.
  plotter.set_range(-100,100,-5,30)
  plotter.plot(iav)
 
-.. figure:: ../../images/rcw49asap.jpg
+.. figure:: ../images/rcw49asap.jpg
     :scale: 100%
     :align: center
     :alt: 22GHz Stokes I spectrum of RCW49.
@@ -235,7 +235,7 @@ The script file is shown below.
 
 
 
-.. figure:: ../../images/300.96+1.14asap.jpg
+.. figure:: ../images/300.96+1.14asap.jpg
     :scale: 100%
     :align: center
     :alt: Stokes I 6668MHz Methanol spectrum for 300.96+1.14.
@@ -294,7 +294,7 @@ Running this script produces the following output and image.
        units:        Jy km/s         km/s            km/s
 
 
-.. figure:: ../../images/galmiriad.jpg
+.. figure:: ../images/galmiriad.jpg
     :scale: 100%
     :align: center
     :alt: Spectrum of a galaxy using the MBSPECT utility of MIRIAD

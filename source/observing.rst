@@ -26,6 +26,7 @@ The remote observer will need the following:
   of a trainer before being qualified as a Remote Observer.
 
 * A computer with the following:
+
  * Access to the internet;
  * A recent version of a commonly used operating system.
  * A VNC application such as VNC viewer, TightVNC , Chicken of the VNC, Remoter for Mac.
