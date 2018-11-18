@@ -46,6 +46,7 @@ available receivers is provided in the table below.
 =============  ========= ============  ========  ========  =========  =============  =========  ===========
 Receiver       Band [cm] Range [GHz]   Diam [m]  FWHP [']  Tsys[K,a]  Sens [Jy/K,b]  Pols[c]    BandW [MHz]
 =============  ========= ============  ========  ========  =========  =============  =========  ===========
+UWL            40-7.5    0.70-4.00       64        7        21        1.6            2xL        3300
 1050CM         50        0.70-0.764      64        30       40        1.1?           2xL        64
 \              10        2.60-3.60       64        6.4      35        1.1            2xL        1000
 MULTI          21        1.23-1.53       64        14.2     28        1.1            26xL       300
@@ -83,6 +84,9 @@ the level requires access to the receiver in the focus cabin and takes of order 
 required, using an observer-selectable waveform. Typically the cal is run as a continuous low-level NAR (Noise-Adding Radiometer) with the 
 cal level approximately 10% of Tsys, for a time-averaged increase of 5%. The frequency of the switching signal is typically between a few Hz 
 and 500Hz. For more information on particular receivers, please refer below.
+
+UWL
+----
 
 1050CM
 ------
