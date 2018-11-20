@@ -167,22 +167,14 @@ November 2014. It is possible to `query the RFI database <https://www.narrabri.a
 
 An introduction to site RFI and past surveys at the site is available `here <http://www.parkes.atnf.csiro.au/observing/rfi/>`_.
 
-.. figure:: ../images/midweekRFI.png
-    :scale: 60%
-    :align: center
-    :alt: An example of the waterfall plot fromt eh RFI monitor showing "mid-week RFI"
-    :figclass: align-center
-
 "Mid-Week" RFI
 --------------
 In addition to the "normal" RFI in the 16cm band, you may also encounter something dubbed "mid-week RFI." This RFI has frequency peaks around 1265 and 1300-1310 MHz, and can have extremely high amplitudes. The RFI monitor can be used to see when mid-week RFI is occuring, as shown in the figure below. Because of the strength of the RFI, it can oven drive the front-end system of the 16cm receivers, or the "tower" digitisers to saturate. If this occurs, the data becomes unusable. Parkes staff now occassionally receive advanced warnings as to when this RFI may be present. Notifications for any potential mid-week RFI is given in the Parkes Portal summary. 
 
-
-
-.. image:: ../images/ripple.jpg
+.. image:: ../images/midweekRFI.png
    :height: 300px
    :align: center
-   :alt: Upper panel showing characteristic 5.7 MHz standing wave interference with lower panel showing a cleaner spectrum obtained with receiver cycling.
+   :alt: An example of the waterfall plot fromt eh RFI monitor showing "mid-week RFI"
 
 Standing Wave Reduction
 -----------------------
