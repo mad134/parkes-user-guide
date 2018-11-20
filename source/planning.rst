@@ -179,7 +179,7 @@ In addition to the "normal" RFI in the 16cm band, you may also encounter somethi
 
 
 
-.. image:: ../../images/ripple.jpg
+.. image:: ../images/ripple.jpg
    :height: 300px
    :align: center
    :alt: Upper panel showing characteristic 5.7 MHz standing wave interference with lower panel showing a cleaner spectrum obtained with receiver cycling.
@@ -196,13 +196,10 @@ the ripple with amplitude 6.3mm peak-to-peak (:math:`\lambda/2`) and period 60 s
 with higher-frequency receivers only and proposers should contact Parkes Operations, ATNF-Parkes-Remobs[at]csiro.au before
 submitting proposals.
 
-<<<<<<< Updated upstream
 .. image:: ../images/ripple.jpg
    :height: 300px
    :alt: Upper panel showing characteristic 5.7 MHz standing wave interference with lower panel showing a cleaner spectrum obtained with receiver cycling.
 =======
-
->>>>>>> Stashed changes
 
 Dish Surface Quality
 --------------------

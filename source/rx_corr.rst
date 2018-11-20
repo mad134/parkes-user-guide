@@ -205,15 +205,8 @@ Signal Path
 
 An overall outline of the Parkes observing system is shown below. 
 
-<<<<<<< Updated upstream
-FIXME: update
-
-.. figure:: ../images/signalpath-overview.jpg
-    :scale: 60%
-=======
-.. figure:: ../../images/signalPath-overview_wUWL.jpg
+.. figure:: ../images/signalPath-overview_wUWL.jpg
     :scale: 80%
->>>>>>> Stashed changes
     :align: center
     :alt:  Overview of the Parkes observing system signal path. 
     :figclass: align-center 
