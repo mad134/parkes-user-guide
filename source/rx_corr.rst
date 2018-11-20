@@ -5,17 +5,17 @@ Sensitivity
 ===========
 
 When preparing your observing proposal, you are required to estimate the expected brightness and sensitivity of 
-your source for your particular Correlator/receiver combinations. For spectral-line observations, sensitivity 
+your source for your particular correlator/receiver combinations. For spectral-line observations, sensitivity 
 per bandwidth channel can be estimated from the following equations of line brightness and line flux respectively:
 
 .. math::  T_{rms} (mK) \sim \frac{ T_{sys} }{ \sqrt{npol \frac{BW}{chan} \delta T} }
 
 .. math:: S_{rms} (\frac{mJy}{beam}) \sim T_{rms} G  \eta_b
 
-In the above, G is the main-beam gain (Jy/K) for a receiver defined from FIXME, npol is the number of polarisations (an 
+In the above, G is the main-beam gain (Jy/K) for a receiver defined from :math:`G = \frac{ \Omega_{mb} }{ \Omega_{tot} }`, where :math:`\Omega_{mb}` and :math:`\Omega_{tot}` are the solid angles on the sky for the main beam and the total collecting are of the antenna, repsectively. npol is the number of polarisations (an 
 average of two independent polarisation channels), BW is the bandwidth [MHz], nchan is the number of channels and 
 :math:`\delta T` is the on-source integration time in seconds. :math:`\eta_b` is the beam efficiency factor 
-:math:`\frac{\Omega_{mb}}{\Omega_{tot}}` = 0.7. For continuum, we need to calculate the sensitivity over the 
+:math:`\frac{\Omega_{mb}}{\Omega_{tot}}` = 0.7, where :math:`\Omega_{mb}` is the . For continuum, we need to calculate the sensitivity over the 
 whole bandwidth. The continuum line brightness and line flux respectively become:
 
 .. math:: T_{rms} (mK) \sim \frac{ T_{sys} }{ \sqrt{npol BW \delta T} }
@@ -203,15 +203,20 @@ An in-depth discussion of the PCS (including block diagrams) is available `here 
 Signal Path
 ===========
 
-An overall outline of the Parkes observing system is shown below.
+An overall outline of the Parkes observing system is shown below. 
 
+<<<<<<< Updated upstream
 FIXME: update
 
 .. figure:: ../images/signalpath-overview.jpg
     :scale: 60%
+=======
+.. figure:: ../../images/signalPath-overview_wUWL.jpg
+    :scale: 80%
+>>>>>>> Stashed changes
     :align: center
-    :alt:  Overview of the Parkes observing system. 
-    :figclass: align-center
+    :alt:  Overview of the Parkes observing system signal path. 
+    :figclass: align-center 
 
 Single-beam spectral-line observations have back-end options using 4, 8 or 64 MHz bandpass capabilities 
 of the 2-bit Multibeam correlator, or patching in an  ATCA-style bandpass filter to provide 16 or 32 MHz 
@@ -225,9 +230,12 @@ Backends
 A number of backend units are available:
 
 * DFB4: spectral line, pulsar, continuum and polarimetry, for one IF dual polarization observations
-* BPSR: multi beam digital backend for pulsar observations (up to 13 IFs dual polarization). 
-* APSR: coherent dedispersion recorder for pulsar observations (one IF dual polarization). 
+* BPSR: multi beam digital backend for pulsar observations (up to 13 IFs dual polarization).
 * HIPSR: a reconfigurable digital backend for the Parkes Multibeam receiver.
+* CASPSR: a GPU-based backend for pulsar observaitons. Capable of phase-coherent dispersion removal for 2 IF, dual-polsarisation signals with a maximum bandwidth of 400 MHz
+* DAS: baseband analog to digital sampling system (VLBI only)
+* MK-V: combines a set of tuneable samplers and a disk recorder for VLBI (VLBI only)
+
 
 Please check the `Parkes Correlator Guide <http://www.parkes.atnf.csiro.au/observing/documentation/software/CORREL/index.html>`_. 
 for information on capabilities or email ATNF-Parkes-Remobs[at]csiro.au to ascertain requirements.

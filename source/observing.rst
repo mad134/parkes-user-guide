@@ -112,9 +112,7 @@ Using VNC from the SOC
 -----------------------
 
 Parkes Observing from the Science Operations Center (SOC) is done in a dedicated room with three monitors connected to the machine ``pyxis``.
-The username and password can be obtained from SOC observing support. The recommended layout for observing is shown below in FIXME.
-
-FIXME
+The username and password can be obtained from SOC observing support.
 
 The VNC servers on joffrey are run as user ``pksobs``.
 
@@ -150,7 +148,7 @@ The above three require internal access, if not on a CSIRO network you will need
 
  ssh -L 30000:hipsr-srv0:80 ident@orion.atnf.csiro.au
 
-Where ident is your ATNF *nix account which can be obtained from a link on the login page of the PORTAL. Once you have connected as above, you
+Where ident is your ATNF unix account which can be obtained from a link on the login page of the PORTAL. Once you have connected as above, you
 point your browser to: ::
 
  http://localhost:30000/apsr/ , http://localhost:30000/bpsr/ or http://localhost:30000/caspsr/
@@ -163,26 +161,29 @@ Observing start up
 TCS
 ---
 
-On ``joffrey:1``, in the first virtual window. If TCS is already running, it is recommended you close it and exit the terminal (especially if
-interleaving projects are pulsar and spectral/continuum in nature.) Open a terminal on joffrey and type: ::
+The following steps pertain to the session ``joffrey:1`` and the first virtual window. If TCS is already running, it is recommended you close it and exit the terminal (especially if
+interleaving projects are pulsar and spectral/continuum in nature.) Open a terminal on joffrey **(not myrcella)** and type: ::
 
  tcs
 
 From the startup GUI, select the relevant mode for your observations (and select the expert mode). Select the relevant recall state if there is one.
 For example:
 
-*  For DFB4 spectral--line/continuum observing select:
- **  DIGITAL F'BANK (time binning)
- **  EXPERT MODE
- **  SELECT PROJECT (if present, via bottom menu)
-*  For Pulsar observing select:
- **  Pulsar observing modes.
- **  EXPERT MODE
- **  SELECT PROJECT (if present, via bottom menu).
- **  Once open:
-  ***  Select PDFB4.
-  ***  FOLD or SEARCH MODE
-  ***  SELECT relevant schedule
+For DFB4 spectral--line/continuum observing select:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *  DIGITAL F'BANK (time binning)
+ *  EXPERT MODE
+ *  SELECT PROJECT (if present, via bottom menu)
+
+ For Pulsar observing select:
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *  Pulsar observing modes.
+ *  EXPERT MODE
+ *  SELECT PROJECT (if present, via bottom menu).
+ * Start
+  *  Select PDFB4.
+  *  FOLD or SEARCH MODE
+  *  SELECT relevant schedule
 *  Focus: Enable
 *  Antenna: Enable
 
@@ -194,7 +195,7 @@ other software is controlling the antenna.
 * Sched agent: CTRL for Spectral-line/Continuum and GUI for Pulsar
 * Sched files (Spectral--line/Continuum observations).
  * Click on Sched file and select OWN, then select the schedule file.
- * For Spectral-line and Continuum projects, schedule files are located in /home/pksobs/Projects/PXXX/ or /nfs/online/local/tcs/sched/pXXX .
+ * For Spectral-line and Continuum projects, schedule files are located in /home/pksobs/Projects/PXXX/ or /nfs/online/local/tcs/sched/PXXX .
  * For Pulsar projects, schedule files are usually located in /psr1/tcs/sched/ .
 
 The indication that this is TCS primary is shown on the title bar of the TCS GUI.
@@ -202,7 +203,7 @@ The indication that this is TCS primary is shown on the title bar of the TCS GUI
 TCS alternative
 ---------------
 
-On ``joffrey:1``, in the second virtual window. If you are using another instance of TCS (i.e., you are using DFB3/DFB4 simultaneously),
+On ``joffrey:1``, in the second virtual window. If you are using another instance of TCS,
 open a ``myrcella`` terminal (right--most terminal icon on taskbar) and type: ::
 
   start_alt
@@ -358,9 +359,6 @@ Stowing and Unstowing
    (top right of TCS GUI), you press the "Stow" button. Once complete, this will disable the drives in Azimuth
    and for Zenith, the antenna will drive to the Zenith Stop position (~ -0.54 deg) and put in the locking pin.
 
-   .. warning::
-      The safety timer will also be disabled.
-
    To unstow the antenna, press the "Unstow-ExLim" button on TCS, under the "ACTION PANEL" section,
    top right on the TCS GUI. This will remove the Zenith locking pin, drive the antenna out of limits
    and leave both drives enabled. Note again, that the MCP must also be in Computer Remote.
@@ -370,8 +368,11 @@ Stowing and Unstowing
 
 Get up and running guides
 -------------------------
+A guide for starting and carrying out observations with the Ultra-wideband Receiver Low (UWL) is available online.
 
+<https://www.parkes.atnf.csiro.au/~kac014/draftUWL_userGuide.pdf>`_
 
+The guide is constantly being updated with the on-going commissioning work for the new receiver. It is recommeded that users check the guide for any critical changes before observing. 
 
 DATA
 ====
@@ -385,6 +386,8 @@ DATA
       .. note::
          Please restrict data processing to machines ``pictor`` or ``lagavulin``.
 
+  Also, see Chapter 6 for access to post-observation and archived data.
+
 
 Telescope Protection System
 ===========================
@@ -396,7 +399,7 @@ These devices are also connected to MoniCA, which the TPS also references.
 Weather and wind restrictions
 -----------------------------
 
-With the introduction of the TPS, it will not longer be the responsibility of the observer to concern themselves with monitoring weather conditions,
+With the introduction of the TPS, it will no longer be the responsibility of the observer to concern themselves with monitoring weather conditions,
 only data quality. However, observers should be aware what TPS will do in terms of protecting the antenna in terms of bad weather conditions, which
 are listed below.
 
