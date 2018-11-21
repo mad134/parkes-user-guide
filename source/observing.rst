@@ -18,7 +18,7 @@ The remote observer will need the following:
 * An active CSIRO login account ('nexus'). To establish an account, follow the instructions `here <http://www.atnf.csiro.au/cgi-bin/atnfres/ident_request.pl>`_.
   Allow 5 working days for the account to be established.
 
-* To book as an observer for the scheduled observations using the `Observer PORTAL <https://parkes-ops.atnf.csiro.au/PORTAL/index.php>`_,
+* To book as an observer for the scheduled observations using the `Observer PORTAL <https://parkes-ops.atnf.csiro.au/jPORTAL/login.jsp>`_,
   under the “Book” tab; see below for an example on how to perform project bookings. Ideally this should be done at least 2 weeks prior to observing.
 
 * To have completed the online Observing induction and have conducted a face-to-face
@@ -132,7 +132,7 @@ Prior to commencing observing
 =============================
 Ensure:
 
-   *  You have logged into the Parkes Observing Portal (https://parkes-ops.atnf.csiro.au/PORTAL/index.php) and FROG (https://parkes-ops.atnf.csiro.au/FROG/index.php).
+   *  You have logged into the Parkes Observing Portal (https://parkes-ops.atnf.csiro.au/jPORTAL/login.jsp) and FROG (https://parkes-ops.atnf.csiro.au/jFROG/login.jsp).
    *  You have contacted the current observing team (or local Parkes staff member) that is listed on the PORTAL chat page.
    *  Following communication with the current observer/staff, clicked on the registration of current observer/staff and entered your details.
 

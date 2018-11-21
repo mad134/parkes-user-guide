@@ -6,10 +6,16 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = build
+INSTALLDIR    = spratty:/pks/www/htdocs/observing/documentation/pks_userguide
+HTML	      = build/html/
+PDF           = build/latex/ParkesUserGuide.pdf
 
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+server:
+	rsync -av "$(HTML)" "$(PDF)" "$(INSTALLDIR)"
 
 .PHONY: help Makefile
 
