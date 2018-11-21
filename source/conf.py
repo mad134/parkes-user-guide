@@ -20,11 +20,8 @@
 # -- Project information -----------------------------------------------------
 
 project = u'Parkes User Guide'
-<<<<<<< HEAD
-=======
 copyright = u'2018, Jimi Green, George Hobbs, Jane Kaczmarek, Stacy Mader, John Sarkissian'
 author = u'Jimi Green, George Hobbs, Jane Kaczmarek, Stacy Mader, John Sarkissian'
->>>>>>> 78e0a304df5355c45895d94d411e4022f33cc55c
 
 # The short X.Y version
 version = u''

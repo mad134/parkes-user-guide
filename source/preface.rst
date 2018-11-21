@@ -5,6 +5,8 @@ About this Guide
 ================
 This manual describes how to apply for observing time, plan and carry out observations and the data access protocols for the CSIRO Parkes Radio Telescope.
 
+A PDF version is available `here <http://www.parkes.atnf.csiro.au/observing/documentation/pks_userguide/ParkesUserGuide.pdf>`_ . 
+
 This manual is a reference guide and it is not necessary that it be read to completion in order to use Parkes. Chapter 1 describes the telescope and the observatory grounds. Chapter 2 details the various receiver and correlators at Parkes. Information in this chapter can be useful for any planning of science proposals and/or upcoming observations. Chapter 3 deals with applying for and planning with Parkes. Chapter 4 goes into detail regarding remote observations and what is needed to be done before and during your observations. Finally, Chapter 5 gives a short introduction to data storage, handling and reduction.
 
 **If you find that this guide does not accurately describe the correct usage of Parkes or its subsequent systems, please email the Parkes Users Guide (PUG) editorial team at <xxx_userguide@atnf.csiro.au>.

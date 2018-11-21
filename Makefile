@@ -6,7 +6,7 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = build
-INSTALLDIR    = spratty:/pks/www/htdocs/observing/documentation/pks_userguide
+INSTALLDIR    = spratty.atnf.csiro.au:/pks/www/htdocs/observing/documentation/pks_userguide
 HTML	      = build/html/
 PDF           = build/latex/ParkesUserGuide.pdf
 

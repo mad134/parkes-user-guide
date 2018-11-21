@@ -189,7 +189,7 @@ In addition to the "normal" RFI in the 16cm band, you may also encounter somethi
    :align: center
    :alt: An example of the waterfall plot fromt eh RFI monitor showing "mid-week RFI"
 
-.. image:: ../../images/ripple.jpg
+.. image:: ../images/ripple.jpg
    :height: 300px
    :align: center
    :alt: Upper panel showing characteristic 5.7 MHz standing wave interference with lower panel showing a cleaner spectrum obtained with receiver cycling.
