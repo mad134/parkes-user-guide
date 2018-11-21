@@ -20,8 +20,8 @@
 # -- Project information -----------------------------------------------------
 
 project = u'Parkes User Guide'
-copyright = u'2018, Stacy Mader, Jane Kaczmarek, John Sarkissian, Jimi Green'
-author = u'Stacy Mader, Jane Kaczmarek, John Sarkissian, Jimi Green'
+copyright = u'2018, Stacy Mader, Jane Kaczmarek, John Sarkissian, Jimi Green, George Hobbs'
+author = u'Stacy Mader, Jane Kaczmarek, John Sarkissian, Jimi Green, George Hobbs'
 
 # The short X.Y version
 version = u''
