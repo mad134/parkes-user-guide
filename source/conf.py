@@ -136,7 +136,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'ParkesUserGuide.tex', u'Parkes User Guide Documentation',
-     u'Stacy Mader, Jane Kaczmarek, John Sarkissian, Jimi Green', 'manual'),
+     u'Jimi Green, George Hobbs, Jane Kaczmarek, Stacy Mader, John Sarkissian', 'manual'),
 ]
 
 latex_logo = '../images/dish.jpg'
